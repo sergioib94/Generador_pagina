@@ -1,5 +1,5 @@
 Title: Instalacion y configuracion basica de Gestor de paginas Pelican
-Date: 2020-10-13 12:00
+Date: 2020-10-18 23:00
 Category: Implantaciones web
 Tags: pelican
 Authors: Sergio Ibáñez
@@ -91,4 +91,31 @@ Por ultimo si elegios subir la pagina a github, nos preguntaran si username.gith
 En mi caso elegi Github ya que mas adelante se usara Netlify que cogera el repositorio github de nuestro sitio web y lo desplegará.
 
 
-!(/images/pelican_inicio.png)
+## **Configurando el generador para hacer cambios**
+
+Hay varias configuracione que podemos hacer en el fichero pelicanconf.py y que os pueden ser utiles a la hora de configurar nuestro sitio, como pueden ser por ejemplo el cambio de nombre de nuestro sitio web o por ejemplo cambiar el tema que usara nuestro sitio.
+
+### **Cambiando el nombre de nuestro sitio web**
+
+Para ello simplemente en el fichero pelicanconf.py editamos la opcion SINTENAME.
+
+### **Cambio de tema**
+
+lo primero sera conseguir un tema que nos guste, esto se podra hacer de dos formas:
+
+* Ejecutando el comando pelican-themes -i. Ej:
+
+<pre>
+pelican-themes -i https://github.com/arulrajnet/Attila.git
+</pre>
+
+o bien clonando un repositorio github donde esta el tema.
+
+<pre>
+git clone https://github.com/alexandrevicenzi/Flex.git
+</pre>
+
+
+Una vez descargado el tema, se comprueba que lo tenemos instalado en pelican ejecutando pelican-theme -l. Cuando ya se tenga el tema, se configurarara el fichero pelicanconf.py, creamos un apartado llamado "Theme" indicandole la ruta donde tenemos almacenada el tema usado, por defecto, estos temas se almacenan en /usr/lib/python3/dist-packages/pelican/themes.
+
+!/images/pelican_inicio.png
